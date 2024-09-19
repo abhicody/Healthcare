@@ -43,7 +43,7 @@ export const AppointmentForm = ({
   const form = useForm<z.infer<typeof AppointmentFormValidation>>({
     resolver: zodResolver(AppointmentFormValidation),
     defaultValues: {
-      primaryPhysician: appointment ? appointment.primaryPhysician : "",
+      primaryPhysician: appointment ? appointment?.primaryPhysician : "",
       schedule: appointment
         ? new Date(appointment?.schedule!)
         : new Date(Date.now()),
@@ -103,7 +103,10 @@ export const AppointmentForm = ({
           type,
         };
 
-        const updatedAppointment = await updateAppointment(appointmentToUpdate);
+        const updatedAppointment = await updateAppointment({
+          ...appointmentToUpdate,
+          timeZone: "UTC", // Assuming the timeZone is required and using UTC as an example
+        });
 
         if (updatedAppointment) {
           setOpen && setOpen(false);
