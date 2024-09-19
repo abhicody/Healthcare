@@ -49,12 +49,7 @@ Make sure you have the following installed on your machine:
 - [Node.js](https://nodejs.org/en)
 - [npm](https://www.npmjs.com/) (Node Package Manager)
 
-**Cloning the Repository**
 
-```bash
-git clone https://github.com/adrianhajdin/healthcare.git
-cd healthcare
-```
 
 **Installation**
 
@@ -78,7 +73,7 @@ PATIENT_COLLECTION_ID=
 APPOINTMENT_COLLECTION_ID=
 NEXT_PUBLIC_BUCKET_ID=
 
-NEXT_PUBLIC_ADMIN_PASSKEY=111111
+NEXT_PUBLIC_ADMIN_PASSKEY=
 ```
 
 Replace the placeholder values with your actual Appwrite credentials. You can obtain these credentials by signing up on the [Appwrite website](https://appwrite.io/).
