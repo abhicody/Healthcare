@@ -7,7 +7,8 @@ export default withSentryConfig(nextConfig, {
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
   org: "honey-bank",
-  project: "care-pulse",
+  project: "javascript-nextjs-hospital",
+  sentryUrl: "https://sentry.io/",
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
